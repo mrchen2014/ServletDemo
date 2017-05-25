@@ -19,7 +19,7 @@
 	</filter-mapping>
 
   <welcome-file-list>
-    <welcome-file>/servlets/Order.html?action=0</welcome-file>
+    <welcome-file>/servlets/Order.do?method=list</welcome-file>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -28,6 +28,7 @@
   </welcome-file-list>
   
   
+  <!-- 配置servlet -->
   <servlet>
     <description>deal order</description>
     <display-name>order</display-name>
@@ -35,11 +36,9 @@
     <servlet-class>cn.edu.ccnu.imd.study.demo.servlet.OrderServlet</servlet-class>
   </servlet>
 
-  
-  
   <servlet-mapping>
     <servlet-name>order</servlet-name>
-    <url-pattern>/servlets/Order.html</url-pattern>
+    <url-pattern>/servlets/Order.do</url-pattern>
   </servlet-mapping>
 
 

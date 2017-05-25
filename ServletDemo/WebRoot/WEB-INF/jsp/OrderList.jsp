@@ -15,7 +15,7 @@ List l = (List)request.getAttribute("OrderList");
  </head>
  <body>
    <h1>订单列表</h1>
-	<div><a href="<%=path %>/servlets/Order.html?action=1">添加订单</a></div>
+	<div><a href="<%=path %>/servlets/Order.do?method=toAdd">添加订单</a></div>
 		<table>
 		<tr>
 			<th>消费人</th>	 
@@ -41,7 +41,7 @@ List l = (List)request.getAttribute("OrderList");
 			<%}else {%>
 			<td style="color:red;">未支付</td>
 			<%}%>
-			<td ><%if(vo.getState() == 0){%><a href="<%=path %>/servlets/Order.html?action=6&state=1&id=<%=vo.getId() %>">支付</a>&nbsp;<a href="<%=path %>/servlets/Order.html?action=4&id=<%=vo.getId() %>">修改</a>&nbsp;<a href="<%=path %>/servlets/Order.html?action=7&id=<%=vo.getId() %>">删除</a><%}%> &nbsp;</td>
+			<td ><%if(vo.getState() == 0){%><a href="<%=path %>/servlets/Order.do?method=updateState&state=1&id=<%=vo.getId() %>">支付</a>&nbsp;<a href="<%=path %>/servlets/Order.do?method=toUpdate&id=<%=vo.getId() %>">修改</a>&nbsp;<a href="<%=path %>/servlets/Order.do?method=delete&id=<%=vo.getId() %>">删除</a><%}%> &nbsp;</td>
 		</tr>
 		<% 
 		}

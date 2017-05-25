@@ -15,7 +15,7 @@ OrderVo vo = (OrderVo)request.getAttribute("OrderVo");
  </head>
  <body>
    <h1>修改订单</h1>
-	<form method="post" action="<%=path %>/servlets/Order.html?action=5">
+	<form method="post" action="<%=path %>/servlets/Order.do?method=update">
 		<table>
 		<tr>
 			<td>消费人</td>

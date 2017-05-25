@@ -13,7 +13,7 @@ String path = request.getContextPath();
  </head>
  <body>
    <h1>添加订单</h1>
-	<form method="post" action="<%=path %>/servlets/Order.html?action=2">
+	<form method="post" action="<%=path %>/servlets/Order.do?method=add">
 		<table>
 		<tr>
 			<td>消费人</td>
