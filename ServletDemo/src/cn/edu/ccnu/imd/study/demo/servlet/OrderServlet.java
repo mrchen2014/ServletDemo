@@ -32,7 +32,7 @@ public class OrderServlet extends HttpServlet {
 			this.method = "list";
 		}
 		OrderVo vo = new OrderVo();
-		//根据method的不同选择不同的方法
+		//根据method的不同选择不同的方法 测试commit
 		switch (this.method) {
 		// 定单列表
 		case "list":
