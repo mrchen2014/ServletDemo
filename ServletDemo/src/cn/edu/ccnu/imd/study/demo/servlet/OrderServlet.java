@@ -25,12 +25,14 @@ public class OrderServlet extends HttpServlet {
 			throws ServletException, IOException {
 		this.path = request.getContextPath();
 		this.url = this.path + "/servlets/Order.do?method=list";
+		
 		try {
 			this.method = request.getParameter("method");
 		} catch (Exception e) {
 			this.method = "list";
 		}
 		OrderVo vo = new OrderVo();
+		//根据method的不同选择不同的方法
 		switch (this.method) {
 		// 定单列表
 		case "list":
